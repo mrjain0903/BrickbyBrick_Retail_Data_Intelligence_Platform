@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    pipeline_globalmart_ecommerce_pipeline:
+      name: Globalmart Ecommerce Pipeline
+      libraries:
+        - glob:
+            include: /Workspace/Users/nipun.jain@kadellabs.com/Globalmart Ecommerce
+              Pipeline/transformations/**
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: globalmart
+      serverless: true
+      root_path: /Workspace/Users/nipun.jain@kadellabs.com/Globalmart Ecommerce Pipeline
