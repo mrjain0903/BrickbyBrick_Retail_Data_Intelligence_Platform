@@ -74,4 +74,4 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 - **Facts:** `fact_sales` (order line), `fact_return` (return event)
 - **Aggregates:** `agg_monthly_revenue_by_region`, `agg_customer_return_summary`, `agg_vendor_return_rate`, `agg_product_region_monthly`
 
----
+
