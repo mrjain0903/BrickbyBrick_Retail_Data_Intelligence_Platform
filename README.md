@@ -2,7 +2,7 @@
 
 Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tables) plus a **Gen AI layer** for data quality, returns risk, product Q&A, and executive insights.
 
----
+
 
 ## Overview
 
@@ -13,7 +13,7 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 | **Gold** | `globalmart.gold` | Star schema (**dims** + **facts**) and **KPI aggregates** for BI and AI. |
 | **Gen AI** | Writes to `globalmart.gold.*` | LLM + (optional) RAG on top of Silver/Gold outputs. |
 
----
+
 
 ## Repository layout
 
@@ -33,7 +33,7 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 
 **Detailed architecture** (data flow, components, DQ rules, Gold tables, Gen AI I/O): see **[`GlobalMart_Architecture.md`](./GlobalMart_Architecture.md)**.
 
----
+
 
 ## Gen AI use cases
 
@@ -46,7 +46,7 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 
 **Model:** `databricks-gpt-oss-20b` (Databricks serving endpoint). UC3 also uses **Sentence Transformers** + **FAISS** for retrieval.
 
----
+
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 - Raw data under a Volume path consistent with **`Bronze.py`** (e.g. `GlobalMart_Retail_Data` under your configured landing path)
 - For Gen AI notebooks: cluster with **OpenAI-compatible** access to the workspace serving endpoint; UC3 may need **GPU/CPU** for embeddings (per cluster policy)
 
----
+
 
 ## How to run
 
@@ -66,7 +66,7 @@ Hackathon project: **medallion data pipeline** on **Databricks** (Delta Live Tab
 
 **Job / bundle:** `Jobs/Globalmart Ecommerce Pipeline.yaml` is a **Databricks asset bundle** reference — adjust `root_path`, `libraries`, and workspace paths to match your environment before deploy.
 
----
+
 
 ## Gold analytics (summary)
 
